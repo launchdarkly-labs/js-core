@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.9.0](https://github.com/launchdarkly-labs/js-core/compare/server-sdk-ai-langchain-v0.8.31...server-sdk-ai-langchain-v0.9.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rename LDAIMetrics.usage and LDAIGraphMetrics.usage to .tokens ([#1366](https://github.com/launchdarkly-labs/js-core/issues/1366))
+* Remove AIProvider deprecated methods and create*/init* aliases (AIC-2388) ([#1363](https://github.com/launchdarkly-labs/js-core/issues/1363))
+* Build judge input as string and strip legacy judge config messages ([#1364](https://github.com/launchdarkly-labs/js-core/issues/1364))
+
+### Features
+
+* Bump to LangChain 1.0 and drop community package requirement ([#1311](https://github.com/launchdarkly-labs/js-core/issues/1311)) ([f5a1c29](https://github.com/launchdarkly-labs/js-core/commit/f5a1c295e51ff07e9003109a873709ea14dad343))
+* Remove AIProvider deprecated methods and create*/init* aliases (AIC-2388) ([#1363](https://github.com/launchdarkly-labs/js-core/issues/1363)) ([ad66314](https://github.com/launchdarkly-labs/js-core/commit/ad66314e403b83976987c54da9c6c70308c25078))
+* Rename LDAIMetrics.usage and LDAIGraphMetrics.usage to .tokens ([#1366](https://github.com/launchdarkly-labs/js-core/issues/1366)) ([ff932b7](https://github.com/launchdarkly-labs/js-core/commit/ff932b74c10307519dc9f913a4330a5b7d79438d))
+* Replace LangChainProvider with Runner protocol implementation (AIC-2388) ([#1338](https://github.com/launchdarkly-labs/js-core/issues/1338)) ([113a0d2](https://github.com/launchdarkly-labs/js-core/commit/113a0d289ce764a3301140b2b14123ce5da9b42e))
+* Support conversation history directly in AI Provider model runners ([#1371](https://github.com/launchdarkly-labs/js-core/issues/1371)) ([b246631](https://github.com/launchdarkly-labs/js-core/commit/b246631bfcaf7155dec52a1580cf4ffb329ebfaa))
+
+
+### Bug Fixes
+
+* **AIC-3497:** allow server-sdk-ai 2.x as a peer of the AI provider packages ([#2090](https://github.com/launchdarkly-labs/js-core/issues/2090)) ([aece398](https://github.com/launchdarkly-labs/js-core/commit/aece398d3fab8688bab99540f623b9c4b7f37935))
+* Build judge input as string and strip legacy judge config messages ([#1364](https://github.com/launchdarkly-labs/js-core/issues/1364)) ([c90034b](https://github.com/launchdarkly-labs/js-core/commit/c90034b58a3b75d92269e7c485f38f1266208f08))
+* Make judge runners non-multi-turn ([#1383](https://github.com/launchdarkly-labs/js-core/issues/1383)) ([3d8f488](https://github.com/launchdarkly-labs/js-core/commit/3d8f488354a5ed590859c7fe96429a2ab9f79c01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @launchdarkly/server-sdk-ai bumped from ^2.0.20 to ^3.0.0
+  * peerDependencies
+    * @launchdarkly/server-sdk-ai bumped from ^1.1.1 || ^2.0.0 to ^3.0.0
+
 ## [0.8.31](https://github.com/launchdarkly/js-core/compare/server-sdk-ai-langchain-v0.8.30...server-sdk-ai-langchain-v0.8.31) (2026-11-06)
 
 

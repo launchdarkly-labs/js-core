@@ -2,6 +2,46 @@
 
 All notable changes to `@launchdarkly/js-sdk-common` will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [2.33.0](https://github.com/launchdarkly-labs/js-core/compare/js-sdk-common-v2.32.2...js-sdk-common-v2.33.0) (2026-11-10)
+
+
+### Features
+
+* add a reusable retry state controller for RETRY-conformant backoff ([#2045](https://github.com/launchdarkly-labs/js-core/issues/2045)) ([721b559](https://github.com/launchdarkly-labs/js-core/commit/721b559ff15bb13e3344921de9539e2663d0f0c8))
+* Add experimental support for file-based overrides. ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Add optional file stats, watch error reporting, and the changed entry name to the platform filesystem interface ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Add optional streaming members to the platform fetch types ([#2092](https://github.com/launchdarkly-labs/js-core/issues/2092)) ([4137805](https://github.com/launchdarkly-labs/js-core/commit/4137805723e14f1f21c07b45039c4eeda9889519))
+* add X-LaunchDarkly-Instance-Id header to server-node SDK (SDK-2358) ([#1377](https://github.com/launchdarkly-labs/js-core/issues/1377)) ([814dc0b](https://github.com/launchdarkly-labs/js-core/commit/814dc0bfd6b152385f3a758f9eeca37a0f9f08e8))
+* **common:** add a shared `monotonicNow()` method ([#2083](https://github.com/launchdarkly-labs/js-core/issues/2083)) ([83edf68](https://github.com/launchdarkly-labs/js-core/commit/83edf68b96fdbde40a91b81cad62b7ec9637c5eb))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2059](https://github.com/launchdarkly-labs/js-core/issues/2059)) ([a80e7ee](https://github.com/launchdarkly-labs/js-core/commit/a80e7ee89736f69eb0d3b7080c03759dbb8de6a5))
+* Migrate the Node.js server and client SDKs to @launchdarkly/eventsource through the platform fetch ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* Move FDv1 fallback directive parsing to the shared package ([#1981](https://github.com/launchdarkly-labs/js-core/issues/1981)) ([e7a3b66](https://github.com/launchdarkly-labs/js-core/commit/e7a3b6647caf3210c9cea40e7818f164537aa50f))
+* Verify TLS certificates on streaming connections by default; a stream served by a private CA now requires tlsParams ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+
+
+### Bug Fixes
+
+* Allow polling and event delivery to connect through a proxy when a private CA is configured ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* Coalesce bursts of file change notifications into one file data reload ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* **common:** remove non-spec fields from FDv2 GoodbyeObject ([#1341](https://github.com/launchdarkly-labs/js-core/issues/1341)) ([feb9aa7](https://github.com/launchdarkly-labs/js-core/commit/feb9aa7f6217bc9b3a9794bc71867e14112ea928))
+* Detect rename-based writes and recreated files in the file data source by watching the containing directories ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* explicit return types and TS6 source compatibility fixes ([#1418](https://github.com/launchdarkly-labs/js-core/issues/1418)) ([9c131a2](https://github.com/launchdarkly-labs/js-core/commit/9c131a2e731c97a7fd4cf7ec1fe11efbbf49d6fb))
+* FDv2 - Support dynamic reconnect URL for streaming. Handle 'error' event types for SSE. ([#1252](https://github.com/launchdarkly-labs/js-core/issues/1252)) ([4ef6cdd](https://github.com/launchdarkly-labs/js-core/commit/4ef6cdd3f07a15e9a6b3b831defcf41d10e6334b))
+* Handle flag keys that are names of built-in object members ([#2170](https://github.com/launchdarkly-labs/js-core/issues/2170)) ([4a18699](https://github.com/launchdarkly-labs/js-core/commit/4a18699619e9335e905d88431dbdd1aefeb16a66))
+* Ignore FDv2 put-object and delete-object events with unsupported kinds ([#2109](https://github.com/launchdarkly-labs/js-core/issues/2109)) ([2729c04](https://github.com/launchdarkly-labs/js-core/commit/2729c046493ba4c84ce0f4abf5be0b369d86c68c))
+* **js-client-sdk:** better handling for event batches over 64 kb ([3a6c08a](https://github.com/launchdarkly-labs/js-core/commit/3a6c08aa83b99f27dbbf08c6af458c675f1e1723))
+* Keep non-string first arguments in log messages ([#2077](https://github.com/launchdarkly-labs/js-core/issues/2077)) ([990df31](https://github.com/launchdarkly-labs/js-core/commit/990df3140b5a1c45ced09aef793dc249e3b49776))
+* Only redact anonymous contexts in custom events for server SDKs ([#1814](https://github.com/launchdarkly-labs/js-core/issues/1814)) ([5a3b3fb](https://github.com/launchdarkly-labs/js-core/commit/5a3b3fbc59e9a0b2d65221d65e54078ffa1bf433))
+* Preserve FDv2 protocol error listeners and stop misreporting server error frames ([#2028](https://github.com/launchdarkly-labs/js-core/issues/2028)) ([3d80bef](https://github.com/launchdarkly-labs/js-core/commit/3d80bef9f56872ed1c625ba1518aed2ebe30c1fd))
+* Re-establish the file data watch when a watched directory is deleted and created again ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Redact anonymous context attributes in migration op and custom events ([#1809](https://github.com/launchdarkly-labs/js-core/issues/1809)) ([c84ec48](https://github.com/launchdarkly-labs/js-core/commit/c84ec485e33ef27cc34610ec838b5466f3a5c96e))
+* Report file data read and processing failures through the error handler instead of an unhandled promise rejection ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+* Retry a failed file data reload and keep the last good data in effect ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* **server-node:** honor x-ld-fd-fallback directive in FDv2 initializer phase ([#1342](https://github.com/launchdarkly-labs/js-core/issues/1342)) ([a80eaca](https://github.com/launchdarkly-labs/js-core/commit/a80eacaafa6174e5f1b4fe21ba11534fdf1f92a8))
+* Stop format() from hanging on a trailing percent sign ([#2056](https://github.com/launchdarkly-labs/js-core/issues/2056)) ([c5114ec](https://github.com/launchdarkly-labs/js-core/commit/c5114ecf5dc32826f260744b0e4aa5c4a7f633d6))
+
 ## [2.32.2](https://github.com/launchdarkly/js-core/compare/js-sdk-common-v2.32.1...js-sdk-common-v2.32.2) (2026-11-06)
 
 

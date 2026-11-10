@@ -1,5 +1,34 @@
 # Changelog
 
+## [4.3.0](https://github.com/launchdarkly-labs/js-core/compare/react-sdk-v4.2.2...react-sdk-v4.3.0) (2026-11-10)
+
+
+### Features
+
+* add fetch-based eventsource entry point to the react sdk ([#2150](https://github.com/launchdarkly-labs/js-core/issues/2150)) ([a4f23b3](https://github.com/launchdarkly-labs/js-core/commit/a4f23b340f81cb768ac2279523c7f2859735f2ec))
+* adding isomorphic provider to bridge client and server ([#1218](https://github.com/launchdarkly-labs/js-core/issues/1218)) ([d766f39](https://github.com/launchdarkly-labs/js-core/commit/d766f39c0d178cc66c80644c3cecddb6e7131c93))
+* **js-client-sdk:** add ability to customize storage impl ([#1404](https://github.com/launchdarkly-labs/js-core/issues/1404)) ([77864cb](https://github.com/launchdarkly-labs/js-core/commit/77864cb04f737c8aab4476422a2a2422c7be978c))
+* release-react-sdk-v4 ([#1238](https://github.com/launchdarkly-labs/js-core/issues/1238)) ([a0eb24d](https://github.com/launchdarkly-labs/js-core/commit/a0eb24d05e34237c852d039ead46f33e31a95c4c))
+
+
+### Bug Fixes
+
+* Bump vercel SDK to latest  ([#1832](https://github.com/launchdarkly-labs/js-core/issues/1832)) ([b0167a2](https://github.com/launchdarkly-labs/js-core/commit/b0167a20b3ac599a231946b03efd9f790cf27d39))
+* **deps:** update dependency next to v16.2.11 [security] ([#1822](https://github.com/launchdarkly-labs/js-core/issues/1822)) ([19454cd](https://github.com/launchdarkly-labs/js-core/commit/19454cd5a2b9fc3729f05ab40f5091ba070a16b0))
+* **deps:** update dependency next to v16.2.3 [security] ([#1263](https://github.com/launchdarkly-labs/js-core/issues/1263)) ([10f582a](https://github.com/launchdarkly-labs/js-core/commit/10f582a460342f6352735b1cd3f93af1f57ba303))
+* **deps:** update dependency next to v16.2.6 [security] ([#1374](https://github.com/launchdarkly-labs/js-core/issues/1374)) ([24487f4](https://github.com/launchdarkly-labs/js-core/commit/24487f49d2f0b87d50af18d807b98a3dc5b11b8f))
+* **react-sdk:** `basicLogger` was not re-exported causing compile time errors ([#1843](https://github.com/launchdarkly-labs/js-core/issues/1843)) ([459c891](https://github.com/launchdarkly-labs/js-core/commit/459c891a718ad52d2f34a7b6b9b53e3c858459cc))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+* **sdk-client:** `executeAfterTrack` ordering ([58e063b](https://github.com/launchdarkly-labs/js-core/commit/58e063bad4651e25beea644425bea23a20f4870f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-client-sdk bumped from 4.14.2 to 4.15.0
+    * @launchdarkly/js-server-sdk-common bumped from 2.26.4 to 2.27.0
+
 ## [4.2.2](https://github.com/launchdarkly/js-core/compare/react-sdk-v4.2.1...react-sdk-v4.2.2) (2026-11-06)
 
 

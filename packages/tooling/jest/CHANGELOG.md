@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.42](https://github.com/launchdarkly-labs/js-core/compare/jest-v1.0.41...jest-v1.0.42) (2026-11-10)
+
+
+### Bug Fixes
+
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/react-native-client-sdk bumped from ~10.23.4 to ~10.24.0
+
 ## [1.0.41](https://github.com/launchdarkly/js-core/compare/jest-v1.0.40...jest-v1.0.41) (2026-11-06)
 
 

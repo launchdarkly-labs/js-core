@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.6.48](https://github.com/launchdarkly-labs/js-core/compare/js-server-sdk-common-edge-v2.6.47...js-server-sdk-common-edge-v2.6.48) (2026-11-10)
+
+
+### Bug Fixes
+
+* explicit return types and TS6 source compatibility fixes ([#1418](https://github.com/launchdarkly-labs/js-core/issues/1418)) ([9c131a2](https://github.com/launchdarkly-labs/js-core/commit/9c131a2e731c97a7fd4cf7ec1fe11efbbf49d6fb))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-server-sdk-common bumped from 2.26.4 to 2.27.0
+
 ## [2.6.47](https://github.com/launchdarkly/js-core/compare/js-server-sdk-common-edge-v2.6.46...js-server-sdk-common-edge-v2.6.47) (2026-11-06)
 
 

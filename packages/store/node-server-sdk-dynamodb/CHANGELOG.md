@@ -1,5 +1,31 @@
 # Changelog
 
+## [6.5.0](https://github.com/launchdarkly-labs/js-core/compare/node-server-sdk-dynamodb-v6.4.7...node-server-sdk-dynamodb-v6.5.0) (2026-11-10)
+
+
+### Features
+
+* Report DynamoDB store errors and implement the availability check ([21e6e7d](https://github.com/launchdarkly-labs/js-core/commit/21e6e7d45cd0f137305cff60c4bf112da8362910))
+* Update store peer dep floor to 9.14.1 to better support error reporting and recovery ([#2097](https://github.com/launchdarkly-labs/js-core/issues/2097)) ([1369fa4](https://github.com/launchdarkly-labs/js-core/commit/1369fa4a157fdc3bc175f96ce77d81877a453c22))
+
+
+### Bug Fixes
+
+* Avoid querying a persistent store on every evaluation of an unknown flag ([#2169](https://github.com/launchdarkly-labs/js-core/issues/2169)) ([da1cd35](https://github.com/launchdarkly-labs/js-core/commit/da1cd35d196cafa2b29925aa65306ccc2201e865))
+* **node-server-sdk-dynamodb:** remove unnecessary ioredis package ([#1306](https://github.com/launchdarkly-labs/js-core/issues/1306)) ([5d6c86e](https://github.com/launchdarkly-labs/js-core/commit/5d6c86ec3d6c37abaccf3e88f62735113a0fe966))
+* **persistent-store:** add error logs for upsert ([#1985](https://github.com/launchdarkly-labs/js-core/issues/1985)) ([5ff1cf2](https://github.com/launchdarkly-labs/js-core/commit/5ff1cf240f6c197c38cc1caceabadf12b3c89ea5))
+* Prevent a hung DynamoDB request from permanently blocking store writes ([21e6e7d](https://github.com/launchdarkly-labs/js-core/commit/21e6e7d45cd0f137305cff60c4bf112da8362910))
+* Retry unprocessed DynamoDB batch writes and report failures instead of dropping items ([21e6e7d](https://github.com/launchdarkly-labs/js-core/commit/21e6e7d45cd0f137305cff60c4bf112da8362910))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @launchdarkly/node-server-sdk bumped from 9.16.4 to 9.17.0
+  * peerDependencies
+    * @launchdarkly/node-server-sdk bumped from >=9.14.1 to >=9.17.0
+
 ## [6.4.7](https://github.com/launchdarkly/js-core/compare/node-server-sdk-dynamodb-v6.4.6...node-server-sdk-dynamodb-v6.4.7) (2026-11-06)
 
 

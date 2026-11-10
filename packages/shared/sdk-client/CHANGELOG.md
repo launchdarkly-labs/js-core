@@ -1,5 +1,51 @@
 # Changelog
 
+## [1.36.0](https://github.com/launchdarkly-labs/js-core/compare/js-client-sdk-common-v1.35.2...js-client-sdk-common-v1.36.0) (2026-11-10)
+
+
+### Features
+
+* Add an opt-in fetch-based EventSource entry to the browser SDK ([#2033](https://github.com/launchdarkly-labs/js-core/issues/2033)) ([7a21f6f](https://github.com/launchdarkly-labs/js-core/commit/7a21f6f717acd88a45d2a97e634126cb7d263630))
+* Add eventSource factory and usePost options to the client-side SDK common ([#2032](https://github.com/launchdarkly-labs/js-core/issues/2032)) ([f514d5b](https://github.com/launchdarkly-labs/js-core/commit/f514d5bc1fd7c995ed63e7eae3ff4624889ea941))
+* Add experimental FDv2 support for React Native. ([#1243](https://github.com/launchdarkly-labs/js-core/issues/1243)) ([7ed2c08](https://github.com/launchdarkly-labs/js-core/commit/7ed2c085cd35d35ffd6f48becb5a60f03b07ad1c))
+* add FDv1 fallback directive parsing and TTL data model ([#1781](https://github.com/launchdarkly-labs/js-core/issues/1781)) ([4a213c3](https://github.com/launchdarkly-labs/js-core/commit/4a213c31f8afc9f5713a60f3a5517ddbc8004cd5))
+* add retry logic to FDv2 polling initializer ([#1230](https://github.com/launchdarkly-labs/js-core/issues/1230)) ([fe8bd37](https://github.com/launchdarkly-labs/js-core/commit/fe8bd375af48edfcfe83822bbbbe4546551c90d9))
+* adding start() method to common client sdk package ([#1244](https://github.com/launchdarkly-labs/js-core/issues/1244)) ([7f5f468](https://github.com/launchdarkly-labs/js-core/commit/7f5f468f93eaa4655d1432af5e7bf8819104700a))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2098](https://github.com/launchdarkly-labs/js-core/issues/2098)) ([0d5e30d](https://github.com/launchdarkly-labs/js-core/commit/0d5e30d1d9c904c1b34020075d397b06523a5c3a))
+* expose setConnectionMode on browser SDK ([#1232](https://github.com/launchdarkly-labs/js-core/issues/1232)) ([9019808](https://github.com/launchdarkly-labs/js-core/commit/9019808edd5f78cbddd9b031da1589cbaa49938f))
+* **js-client-sdk:** add ability to customize storage impl ([#1404](https://github.com/launchdarkly-labs/js-core/issues/1404)) ([77864cb](https://github.com/launchdarkly-labs/js-core/commit/77864cb04f737c8aab4476422a2a2422c7be978c))
+* Move FDv1 fallback directive parsing to the shared package ([#1981](https://github.com/launchdarkly-labs/js-core/issues/1981)) ([e7a3b66](https://github.com/launchdarkly-labs/js-core/commit/e7a3b6647caf3210c9cea40e7818f164537aa50f))
+* Prepare FDv2 EAP for browser and React Native SDKs ([#1419](https://github.com/launchdarkly-labs/js-core/issues/1419)) ([6ee9c51](https://github.com/launchdarkly-labs/js-core/commit/6ee9c515fe9aaf999fd7f0eb722d6df9a2d208d8))
+* support per-mode FDv1 fallback configuration ([#1246](https://github.com/launchdarkly-labs/js-core/issues/1246)) ([9956bce](https://github.com/launchdarkly-labs/js-core/commit/9956bce2cc70642c63da79f904c5d5554892e046))
+* support waitForNetworkResults in FDv2 data manager ([#1280](https://github.com/launchdarkly-labs/js-core/issues/1280)) ([df7fa9e](https://github.com/launchdarkly-labs/js-core/commit/df7fa9e571703132ffa697e8a005f31d7ab866dd))
+* warn that payload filtering has no effect with FDv2 ([#1984](https://github.com/launchdarkly-labs/js-core/issues/1984)) ([5e37aca](https://github.com/launchdarkly-labs/js-core/commit/5e37aca49398ff01aa0c71b75d106699a1461cd3))
+* wire registerDebugOverrides through client common ([#1368](https://github.com/launchdarkly-labs/js-core/issues/1368)) ([9011c2a](https://github.com/launchdarkly-labs/js-core/commit/9011c2a76f7460770efe3c07b3e16338b647d9df))
+
+
+### Bug Fixes
+
+* add defensive cycle guard to prerequisite evaluation ([#1816](https://github.com/launchdarkly-labs/js-core/issues/1816)) ([9426b42](https://github.com/launchdarkly-labs/js-core/commit/9426b42dbb5e96914c62462ff7281ec6e24727b3))
+* client side fdv2 payload type ([#1778](https://github.com/launchdarkly-labs/js-core/issues/1778)) ([0b9fde5](https://github.com/launchdarkly-labs/js-core/commit/0b9fde5d88dc0816937f5fb0baa6ca205388e53f))
+* **common:** remove non-spec fields from FDv2 GoodbyeObject ([#1341](https://github.com/launchdarkly-labs/js-core/issues/1341)) ([feb9aa7](https://github.com/launchdarkly-labs/js-core/commit/feb9aa7f6217bc9b3a9794bc71867e14112ea928))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* FDv2 - Support dynamic reconnect URL for streaming. Handle 'error' event types for SSE. ([#1252](https://github.com/launchdarkly-labs/js-core/issues/1252)) ([4ef6cdd](https://github.com/launchdarkly-labs/js-core/commit/4ef6cdd3f07a15e9a6b3b831defcf41d10e6334b))
+* FDv2 -- cache initializer returns transfer-none on cache miss ([#1275](https://github.com/launchdarkly-labs/js-core/issues/1275)) ([7bf3c31](https://github.com/launchdarkly-labs/js-core/commit/7bf3c3122dc01146988d3722ff659f011967ea3d))
+* FDv2 Only -- Adjust the behavior of initialization when only cache initializers are available. ([#1304](https://github.com/launchdarkly-labs/js-core/issues/1304)) ([9a2b25a](https://github.com/launchdarkly-labs/js-core/commit/9a2b25afd1507b2b6e42b85a32edea7a40be8bb0))
+* Ignore FDv2 put-object and delete-object events with unsupported kinds ([#2109](https://github.com/launchdarkly-labs/js-core/issues/2109)) ([2729c04](https://github.com/launchdarkly-labs/js-core/commit/2729c046493ba4c84ce0f4abf5be0b369d86c68c))
+* Keep JSDoc in sdk-client declarations and show inherited LDClient docs ([#2181](https://github.com/launchdarkly-labs/js-core/issues/2181)) ([09b5f99](https://github.com/launchdarkly-labs/js-core/commit/09b5f99ba0f605f1d809411cd2a8762189e947a7))
+* migrate anonymous context namespace to general namespace ([#1312](https://github.com/launchdarkly-labs/js-core/issues/1312)) ([afbed0f](https://github.com/launchdarkly-labs/js-core/commit/afbed0f299808f21dd4a8aa5159fe8d31879e1b9))
+* Preserve FDv2 protocol error listeners and stop misreporting server error frames ([#2028](https://github.com/launchdarkly-labs/js-core/issues/2028)) ([3d80bef](https://github.com/launchdarkly-labs/js-core/commit/3d80bef9f56872ed1c625ba1518aed2ebe30c1fd))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+* **sdk-client-common:** `identify()` bootstrap does not set flagstore in FDv2 ([#1837](https://github.com/launchdarkly-labs/js-core/issues/1837)) ([574f816](https://github.com/launchdarkly-labs/js-core/commit/574f8164ed930423c44d82d4c1ad210387bfc5b9))
+* **sdk-client:** `executeAfterTrack` ordering ([58e063b](https://github.com/launchdarkly-labs/js-core/commit/58e063bad4651e25beea644425bea23a20f4870f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-sdk-common bumped from 2.32.2 to 2.33.0
+
 ## [1.35.2](https://github.com/launchdarkly/js-core/compare/js-client-sdk-common-v1.35.1...js-client-sdk-common-v1.35.2) (2026-11-06)
 
 

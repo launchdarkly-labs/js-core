@@ -8,6 +8,65 @@ All notable changes to `@launchdarkly/js-server-sdk-common` will be documented i
   * dependencies
     * @launchdarkly/js-sdk-common bumped from 2.3.0 to 2.3.1
 
+## [2.27.0](https://github.com/launchdarkly-labs/js-core/compare/js-server-sdk-common-v2.26.4...js-server-sdk-common-v2.27.0) (2026-11-10)
+
+
+### Features
+
+* Add experimental support for file-based overrides. ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Add FDv2 persistent store write-back recovery ([#2011](https://github.com/launchdarkly-labs/js-core/issues/2011)) ([9a785cc](https://github.com/launchdarkly-labs/js-core/commit/9a785cc109b60f206803125871298f261db391dd))
+* Add optional file stats, watch error reporting, and the changed entry name to the platform filesystem interface ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* add X-LaunchDarkly-Instance-Id header to server-node SDK (SDK-2358) ([#1377](https://github.com/launchdarkly-labs/js-core/issues/1377)) ([814dc0b](https://github.com/launchdarkly-labs/js-core/commit/814dc0bfd6b152385f3a758f9eeca37a0f9f08e8))
+* **common:** add a shared `monotonicNow()` method ([#2083](https://github.com/launchdarkly-labs/js-core/issues/2083)) ([83edf68](https://github.com/launchdarkly-labs/js-core/commit/83edf68b96fdbde40a91b81cad62b7ec9637c5eb))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2059](https://github.com/launchdarkly-labs/js-core/issues/2059)) ([a80e7ee](https://github.com/launchdarkly-labs/js-core/commit/a80e7ee89736f69eb0d3b7080c03759dbb8de6a5))
+* Migrate the Node.js server and client SDKs to @launchdarkly/eventsource through the platform fetch ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* Propagate store errors and the availability check through the persistence wrapper ([#2010](https://github.com/launchdarkly-labs/js-core/issues/2010)) ([a752f93](https://github.com/launchdarkly-labs/js-core/commit/a752f93c4233b98868fc8dd71a7c7282134860c2))
+* **sdk-server-common:** add support for custom base uris in FDv2 datasources  ([#1827](https://github.com/launchdarkly-labs/js-core/issues/1827)) ([5d028c3](https://github.com/launchdarkly-labs/js-core/commit/5d028c36ab308973957dff226839026994b70fd2))
+* Verify TLS certificates on streaming connections by default; a stream served by a private CA now requires tlsParams ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* warn that payload filtering has no effect with FDv2 ([#1984](https://github.com/launchdarkly-labs/js-core/issues/1984)) ([5e37aca](https://github.com/launchdarkly-labs/js-core/commit/5e37aca49398ff01aa0c71b75d106699a1461cd3))
+
+
+### Bug Fixes
+
+* ability to handle FDv1 `flagValues` shorthand map to FDv2FiledataInitializer ([#1811](https://github.com/launchdarkly-labs/js-core/issues/1811)) ([cbdaf6e](https://github.com/launchdarkly-labs/js-core/commit/cbdaf6ec020e0567c640ce73c9978c1252c7ff35))
+* Allow polling and event delivery to connect through a proxy when a private CA is configured ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* Avoid querying a persistent store on every evaluation of an unknown flag ([#2169](https://github.com/launchdarkly-labs/js-core/issues/2169)) ([da1cd35](https://github.com/launchdarkly-labs/js-core/commit/da1cd35d196cafa2b29925aa65306ccc2201e865))
+* Base the validity of the uninitialized all flags state on the override layer's flags ([#2132](https://github.com/launchdarkly-labs/js-core/issues/2132)) ([9cafac5](https://github.com/launchdarkly-labs/js-core/commit/9cafac5abf2933146a5d78636bb48b7f4f23de02))
+* Coalesce bursts of file change notifications into one file data reload ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* custom featureStores in FDv2 does not get wrapped as TransactionalFeatureStore. ([#1812](https://github.com/launchdarkly-labs/js-core/issues/1812)) ([c687a97](https://github.com/launchdarkly-labs/js-core/commit/c687a9702db83d0b1093c8c794bee6bca89c856a))
+* Detect rename-based writes and recreated files in the file data source by watching the containing directories ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Disable event processor background flush timers for edge clients ([#1797](https://github.com/launchdarkly-labs/js-core/issues/1797)) ([bac7f81](https://github.com/launchdarkly-labs/js-core/commit/bac7f81e07bcd0bbbf2abcfd15cb6ca7f3e512cb))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* explicit return types and TS6 source compatibility fixes ([#1418](https://github.com/launchdarkly-labs/js-core/issues/1418)) ([9c131a2](https://github.com/launchdarkly-labs/js-core/commit/9c131a2e731c97a7fd4cf7ec1fe11efbbf49d6fb))
+* Handle flag keys that are names of built-in object members ([#2170](https://github.com/launchdarkly-labs/js-core/issues/2170)) ([4a18699](https://github.com/launchdarkly-labs/js-core/commit/4a18699619e9335e905d88431dbdd1aefeb16a66))
+* Ignore FDv2 put-object and delete-object events with unsupported kinds ([#2109](https://github.com/launchdarkly-labs/js-core/issues/2109)) ([2729c04](https://github.com/launchdarkly-labs/js-core/commit/2729c046493ba4c84ce0f4abf5be0b369d86c68c))
+* Keep a flag named __proto__ in file data, change events and persistent store reads ([#2174](https://github.com/launchdarkly-labs/js-core/issues/2174)) ([1ffb29b](https://github.com/launchdarkly-labs/js-core/commit/1ffb29b29362f951b10cb91cb04f68c6cccb2e6f))
+* Log the cached-data evaluation warning only once per client ([#2015](https://github.com/launchdarkly-labs/js-core/issues/2015)) ([0bb2164](https://github.com/launchdarkly-labs/js-core/commit/0bb2164fb9e60817af3a5b11e714d14bc7681cdc))
+* Make TestData valueForAll return its value when targeting is off ([#2177](https://github.com/launchdarkly-labs/js-core/issues/2177)) ([fc8c1f6](https://github.com/launchdarkly-labs/js-core/commit/fc8c1f641eadbec54f811e6bea27c6928f46b2eb))
+* Notify overridden flags when the LaunchDarkly data they depend on changes ([#2108](https://github.com/launchdarkly-labs/js-core/issues/2108)) ([1c21ae9](https://github.com/launchdarkly-labs/js-core/commit/1c21ae9c1ad9c35a8962e73499187978c0df8d5f))
+* Only redact anonymous contexts in custom events for server SDKs ([#1814](https://github.com/launchdarkly-labs/js-core/issues/1814)) ([5a3b3fb](https://github.com/launchdarkly-labs/js-core/commit/5a3b3fbc59e9a0b2d65221d65e54078ffa1bf433))
+* **persistent-store:** add error logs for upsert ([#1985](https://github.com/launchdarkly-labs/js-core/issues/1985)) ([5ff1cf2](https://github.com/launchdarkly-labs/js-core/commit/5ff1cf240f6c197c38cc1caceabadf12b3c89ea5))
+* Preserve FDv2 protocol error listeners and stop misreporting server error frames ([#2028](https://github.com/launchdarkly-labs/js-core/issues/2028)) ([3d80bef](https://github.com/launchdarkly-labs/js-core/commit/3d80bef9f56872ed1c625ba1518aed2ebe30c1fd))
+* Prevent TestData from throwing for a flag named constructor or toString ([#2173](https://github.com/launchdarkly-labs/js-core/issues/2173)) ([4e58d1d](https://github.com/launchdarkly-labs/js-core/commit/4e58d1d08d20f46ba46bbdd92a1b52b3d665e3b7))
+* Re-establish the file data watch when a watched directory is deleted and created again ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Report file data read and processing failures through the error handler instead of an unhandled promise rejection ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Retry a failed file data reload and keep the last good data in effect ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Return a malformed flag result instead of throwing for a definition the evaluator cannot read ([#2095](https://github.com/launchdarkly-labs/js-core/issues/2095)) ([22038e1](https://github.com/launchdarkly-labs/js-core/commit/22038e10bb69f2f7b43ffc256572354bd2343626))
+* **sdk-server-common:** use subpath import for `semver` module ([#1885](https://github.com/launchdarkly-labs/js-core/issues/1885)) ([2de6c8c](https://github.com/launchdarkly-labs/js-core/commit/2de6c8cc39e6b7a4e4092af0731b2de124d56b94))
+* Serialize flags and segments without modifying the stored objects ([#2080](https://github.com/launchdarkly-labs/js-core/issues/2080)) ([28d0738](https://github.com/launchdarkly-labs/js-core/commit/28d0738bddb7baeece0a7ded4962e71875801670))
+* server sdk could send user agent headers under a different header name ([#1860](https://github.com/launchdarkly-labs/js-core/issues/1860)) ([669662a](https://github.com/launchdarkly-labs/js-core/commit/669662a304c10bcb2b683e0c7ea990f43679916b))
+* **server-node:** honor x-ld-fd-fallback directive in FDv2 initializer phase ([#1342](https://github.com/launchdarkly-labs/js-core/issues/1342)) ([a80eaca](https://github.com/launchdarkly-labs/js-core/commit/a80eacaafa6174e5f1b4fe21ba11534fdf1f92a8))
+* Treat a repeated override file path in a different case as a repeat on Windows ([#2134](https://github.com/launchdarkly-labs/js-core/issues/2134)) ([d331546](https://github.com/launchdarkly-labs/js-core/commit/d3315463a3142e1e90edf7589a0f77d8f53406b3))
+* Warn when offline mode skips the override source, and ignore snapshots after close ([#2133](https://github.com/launchdarkly-labs/js-core/issues/2133)) ([612918c](https://github.com/launchdarkly-labs/js-core/commit/612918cf89b76b587fe681837f7919c9d1f311d6))
+* Wire timeout option through to flag polling and event delivery requests ([#1760](https://github.com/launchdarkly-labs/js-core/issues/1760)) ([e18998e](https://github.com/launchdarkly-labs/js-core/commit/e18998eb339a7edc1e059c2f6832afe2739b0bd6))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-sdk-common bumped from 2.32.2 to 2.33.0
+
 ## [2.26.4](https://github.com/launchdarkly/js-core/compare/js-server-sdk-common-v2.26.3...js-server-sdk-common-v2.26.4) (2026-11-06)
 
 

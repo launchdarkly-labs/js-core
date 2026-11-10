@@ -1,5 +1,59 @@
 # Changelog
 
+## [5.0.0](https://github.com/launchdarkly-labs/js-core/compare/node-client-sdk-v4.4.3...node-client-sdk-v5.0.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* `identify()` resolves an identify result and no longer throws
+* The on-disk persistent cache format changed; v3 cache data will not be read by v4 and the anonymous key will be regenerated on first identify.
+* pre-release `@launchdarkly/node-client-sdk` as `0.1.0` ([#1757](https://github.com/launchdarkly-labs/js-core/issues/1757))
+
+### BREAKING-CHANGE
+
+* The package name changed from `launchdarkly-node-client-sdk` to `@launchdarkly/node-client-sdk`. ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+
+
+### Features
+
+* `identify()` resolves an identify result and no longer throws ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* Add eventSource factory and usePost options to the client-side SDK common ([#2032](https://github.com/launchdarkly-labs/js-core/issues/2032)) ([f514d5b](https://github.com/launchdarkly-labs/js-core/commit/f514d5bc1fd7c995ed63e7eae3ff4624889ea941))
+* Add FDv2 data system support to NodeClient ([#1775](https://github.com/launchdarkly-labs/js-core/issues/1775)) ([3ea0f33](https://github.com/launchdarkly-labs/js-core/commit/3ea0f3398d25e8881775937a6ce2872242e4cbcc))
+* Add useMobileKey option to NodeOptions ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2098](https://github.com/launchdarkly-labs/js-core/issues/2098)) ([0d5e30d](https://github.com/launchdarkly-labs/js-core/commit/0d5e30d1d9c904c1b34020075d397b06523a5c3a))
+* enable FDv1 streaming extended-regime backoff for node-client and electron ([#2102](https://github.com/launchdarkly-labs/js-core/issues/2102)) ([567e3b3](https://github.com/launchdarkly-labs/js-core/commit/567e3b32629b4d1c75b93f7bcbfc3be3dc28d546))
+* Evaluation, identify, and track hooks ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* Inspector support for flag and context state ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* Migrate the Node.js server and client SDKs to @launchdarkly/eventsource through the platform fetch ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* **node-client-sdk:** adding ability to override storage implementation ([#1753](https://github.com/launchdarkly-labs/js-core/issues/1753)) ([a04ec92](https://github.com/launchdarkly-labs/js-core/commit/a04ec9215e069b7195c6e7aba21c09b39c607837))
+* **node-client-sdk:** adding support for mobile usage ([#1768](https://github.com/launchdarkly-labs/js-core/issues/1768)) ([71d47a7](https://github.com/launchdarkly-labs/js-core/commit/71d47a70d303df349592a1573eb927d983673782))
+* Plugin extension surface with `applicationInfo` metadata ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* pre-release `@launchdarkly/node-client-sdk` as `0.1.0` ([#1757](https://github.com/launchdarkly-labs/js-core/issues/1757)) ([e14e6f9](https://github.com/launchdarkly-labs/js-core/commit/e14e6f91148e1c7b65756cb653a45ebad883d1d6))
+* Runtime connection-mode control via `setConnectionMode` ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* Storage configuration with file-backed default and custom-implementation override ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* support client side secure mode with client side id ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* support wrapper header ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* TLS configuration via `tlsParams` ([4116d2f](https://github.com/launchdarkly-labs/js-core/commit/4116d2f4cee34d0c2b8041b2b2a93a2a61820471))
+* Verify TLS certificates on streaming connections by default; a stream served by a private CA now requires tlsParams ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* wire fdv1-fallback capability into node-client, browser, and react-native contract-test entities ([#1858](https://github.com/launchdarkly-labs/js-core/issues/1858)) ([462c950](https://github.com/launchdarkly-labs/js-core/commit/462c95098d2143802939cd010cfacd39e26a1c22))
+
+
+### Bug Fixes
+
+* Allow polling and event delivery to connect through a proxy when a private CA is configured ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* **node-client-sdk:** adding docs to clarify FDv2 datasystem will ignore `initialConnectionMode` ([#1835](https://github.com/launchdarkly-labs/js-core/issues/1835)) ([b43c784](https://github.com/launchdarkly-labs/js-core/commit/b43c78460a738b38eabc8b72698ca86cf1faafd3))
+* **node-client-sdk:** better handling for bad filesystem states ([#1799](https://github.com/launchdarkly-labs/js-core/issues/1799)) ([8f58b35](https://github.com/launchdarkly-labs/js-core/commit/8f58b3515f004070034561c804dcb7586471906b))
+* **node-client-sdk:** correct sdk_metadata.json entry and restore userAgentBase ([#1840](https://github.com/launchdarkly-labs/js-core/issues/1840)) ([5da9ef6](https://github.com/launchdarkly-labs/js-core/commit/5da9ef63716d7b5aa24c2199149ea32ef8f76d57))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/eventsource bumped from 0.2.4 to 0.3.0
+    * @launchdarkly/js-client-sdk-common bumped from 1.35.2 to 1.36.0
+
 ## [4.4.3](https://github.com/launchdarkly/js-core/compare/node-client-sdk-v4.4.2...node-client-sdk-v4.4.3) (2026-11-06)
 
 

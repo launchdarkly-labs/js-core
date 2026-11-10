@@ -21,6 +21,23 @@ All notable changes to the LaunchDarkly SDK for Cloudflare Workers will be docum
   * devDependencies
     * @launchdarkly/js-server-sdk-common-edge bumped from 2.2.1 to 2.2.2
 
+## [2.7.52](https://github.com/launchdarkly-labs/js-core/compare/cloudflare-server-sdk-v2.7.51...cloudflare-server-sdk-v2.7.52) (2026-11-10)
+
+
+### Bug Fixes
+
+* **cloudflare:** bundle tslib with esm module ([#1292](https://github.com/launchdarkly-labs/js-core/issues/1292)) ([d7ed722](https://github.com/launchdarkly-labs/js-core/commit/d7ed7229d277e6ff96929c279279d85b094d596f))
+* Export LDMigrationError and LDMigrationTracker from the Cloudflare SDK ([#1988](https://github.com/launchdarkly-labs/js-core/issues/1988)) ([33c5433](https://github.com/launchdarkly-labs/js-core/commit/33c5433b44ff3664698d669ce8543dbaeedb42e6))
+* remove `rollup-plugin-dts` dependency ([#1288](https://github.com/launchdarkly-labs/js-core/issues/1288)) ([ea64b82](https://github.com/launchdarkly-labs/js-core/commit/ea64b82a2c9d93d5c94fbc6e972cd9b5646b7cf1))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-server-sdk-common-edge bumped from 2.6.47 to 2.6.48
+
 ## [2.7.51](https://github.com/launchdarkly/js-core/compare/cloudflare-server-sdk-v2.7.50...cloudflare-server-sdk-v2.7.51) (2026-11-06)
 
 

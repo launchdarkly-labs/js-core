@@ -86,6 +86,23 @@ All notable changes to the LaunchDarkly SDK for Akamai Workers will be documente
   * dependencies
     * @launchdarkly/js-server-sdk-common bumped from ^2.2.1 to ^2.2.2
 
+## [2.0.50](https://github.com/launchdarkly-labs/js-core/compare/akamai-edgeworker-sdk-common-v2.0.49...akamai-edgeworker-sdk-common-v2.0.50) (2026-11-10)
+
+
+### Bug Fixes
+
+* **akamai-edgeworker-sdk:** reduce bundles with dual ESM and CJS output ([#2171](https://github.com/launchdarkly-labs/js-core/issues/2171)) ([1504e6c](https://github.com/launchdarkly-labs/js-core/commit/1504e6ccfc96c4821aa440200029889f32639f87))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* explicit return types and TS6 source compatibility fixes ([#1418](https://github.com/launchdarkly-labs/js-core/issues/1418)) ([9c131a2](https://github.com/launchdarkly-labs/js-core/commit/9c131a2e731c97a7fd4cf7ec1fe11efbbf49d6fb))
+* **perf:** reduce Akamai CryptoJS bundle size ([#1877](https://github.com/launchdarkly-labs/js-core/issues/1877)) ([0b3e1ec](https://github.com/launchdarkly-labs/js-core/commit/0b3e1ec66ae1272733d4fc80d5bd82f8c9d1cf17))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-server-sdk-common bumped from ^2.26.4 to ^2.27.0
+
 ## [2.0.49](https://github.com/launchdarkly/js-core/compare/akamai-edgeworker-sdk-common-v2.0.48...akamai-edgeworker-sdk-common-v2.0.49) (2026-11-06)
 
 

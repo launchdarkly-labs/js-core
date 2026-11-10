@@ -1,5 +1,34 @@
 # Changelog
 
+## [10.24.0](https://github.com/launchdarkly-labs/js-core/compare/react-native-client-sdk-v10.23.4...react-native-client-sdk-v10.24.0) (2026-11-10)
+
+
+### Features
+
+* Add eventSource factory and usePost options to the client-side SDK common ([#2032](https://github.com/launchdarkly-labs/js-core/issues/2032)) ([f514d5b](https://github.com/launchdarkly-labs/js-core/commit/f514d5bc1fd7c995ed63e7eae3ff4624889ea941))
+* Add experimental FDv2 support for React Native. ([#1243](https://github.com/launchdarkly-labs/js-core/issues/1243)) ([7ed2c08](https://github.com/launchdarkly-labs/js-core/commit/7ed2c085cd35d35ffd6f48becb5a60f03b07ad1c))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2098](https://github.com/launchdarkly-labs/js-core/issues/2098)) ([0d5e30d](https://github.com/launchdarkly-labs/js-core/commit/0d5e30d1d9c904c1b34020075d397b06523a5c3a))
+* conform the React Native SDK streaming data source to the RETRY spec ([#2103](https://github.com/launchdarkly-labs/js-core/issues/2103)) ([8cc60e5](https://github.com/launchdarkly-labs/js-core/commit/8cc60e5acec595347026d54fabe35c6d82a89f33))
+* Prepare FDv2 EAP for browser and React Native SDKs ([#1419](https://github.com/launchdarkly-labs/js-core/issues/1419)) ([6ee9c51](https://github.com/launchdarkly-labs/js-core/commit/6ee9c515fe9aaf999fd7f0eb722d6df9a2d208d8))
+* **react-native:** adding debug override plugin support ([#1410](https://github.com/launchdarkly-labs/js-core/issues/1410)) ([99a96d2](https://github.com/launchdarkly-labs/js-core/commit/99a96d2d73a98264e551074f66fb5d10155042c6))
+* **react-native:** no storage fallback to in-memory map ([#1281](https://github.com/launchdarkly-labs/js-core/issues/1281)) ([cc86eab](https://github.com/launchdarkly-labs/js-core/commit/cc86eabe18fd524472c7cf36847c0d757aecc6d1))
+* wire fdv1-fallback capability into node-client, browser, and react-native contract-test entities ([#1858](https://github.com/launchdarkly-labs/js-core/issues/1858)) ([462c950](https://github.com/launchdarkly-labs/js-core/commit/462c95098d2143802939cd010cfacd39e26a1c22))
+
+
+### Bug Fixes
+
+* Honor urlBuilder on React Native EventSource reconnect ([#1420](https://github.com/launchdarkly-labs/js-core/issues/1420)) ([93bd3f8](https://github.com/launchdarkly-labs/js-core/commit/93bd3f84d1c824fe1bea94f7760c586349c3dc3e))
+* **react-native:** `package.json` should declare esm format ([#1322](https://github.com/launchdarkly-labs/js-core/issues/1322)) ([149ae73](https://github.com/launchdarkly-labs/js-core/commit/149ae73c623cf7ccac6f7d7346059a80e8044280))
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+* **sdk-client:** `executeAfterTrack` ordering ([58e063b](https://github.com/launchdarkly-labs/js-core/commit/58e063bad4651e25beea644425bea23a20f4870f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-client-sdk-common bumped from 1.35.2 to 1.36.0
+
 ## [10.23.4](https://github.com/launchdarkly/js-core/compare/react-native-client-sdk-v10.23.3...react-native-client-sdk-v10.23.4) (2026-11-06)
 
 

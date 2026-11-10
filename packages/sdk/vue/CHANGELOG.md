@@ -1,5 +1,40 @@
 # Changelog
 
+## [4.0.0](https://github.com/launchdarkly-labs/js-core/compare/vue-client-sdk-v3.0.11...vue-client-sdk-v4.0.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Implicit anonymous-user fallback removed; context is now required in LDVuePluginOptions and createLDProvider.
+
+### Features
+
+* Bootstrap support to eliminate initialization waterfall ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* createClient for programmatic client creation (BYO client pattern) ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* LDVueClient type extending base LDClient with Vue lifecycle helpers ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Multi-environment support via createLDVueInstanceKey ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Provider component API: createLDProvider, createLDProviderWithClient ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Provider slots for initialization states (default, initializing, failed) ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Reactive flag keys (MaybeRefOrGetter&lt;string&gt;) on all variation composables ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* startOptions for controlling initialization timeout ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Typed variation composables: useBoolVariation, useStringVariation, ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* useInitializationStatus replaces useLDReady with richer status object ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Variation detail composables for each type (useBoolVariationDetail, etc.) ([d3b97a8](https://github.com/launchdarkly-labs/js-core/commit/d3b97a8c3c8e00774b6edcba07f0d6542233a4a2))
+* Wire packages/sdk/vue into release-please as an active prerelease ([#1850](https://github.com/launchdarkly-labs/js-core/issues/1850)) ([4f5ef29](https://github.com/launchdarkly-labs/js-core/commit/4f5ef292f873103db10e06df338c90ca5b791a7e))
+
+
+### Bug Fixes
+
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+* **vue-sdk:** re-export `LDPlugin` from base impl ([#1897](https://github.com/launchdarkly-labs/js-core/issues/1897)) ([e21f484](https://github.com/launchdarkly-labs/js-core/commit/e21f4842f2f1f5e3223e35e26cb82bb171681f2f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-client-sdk bumped from 4.14.2 to 4.15.0
+
 ## [3.0.11](https://github.com/launchdarkly/js-core/compare/vue-client-sdk-v3.0.10...vue-client-sdk-v3.0.11) (2026-11-06)
 
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/launchdarkly-labs/js-core/compare/eventsource-v0.2.4...eventsource-v0.3.0) (2026-11-10)
+
+
+### Features
+
+* Add optional streaming members to the platform fetch types ([#2092](https://github.com/launchdarkly-labs/js-core/issues/2092)) ([4137805](https://github.com/launchdarkly-labs/js-core/commit/4137805723e14f1f21c07b45039c4eeda9889519))
+* Add the fetch-based EventSource client to @launchdarkly/eventsource ([#2030](https://github.com/launchdarkly-labs/js-core/issues/2030)) ([1414654](https://github.com/launchdarkly-labs/js-core/commit/141465483b56928f50def6e66c494f2d117517cd))
+* pre-release of `@launchdarkly/eventsource` ([#2088](https://github.com/launchdarkly-labs/js-core/issues/2088)) ([bf43b71](https://github.com/launchdarkly-labs/js-core/commit/bf43b71939bc63662b1a9bcbf828b339aafc359f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @launchdarkly/js-sdk-common bumped from 2.32.2 to 2.33.0
+
 ## [0.2.4](https://github.com/launchdarkly/js-core/compare/eventsource-v0.2.3...eventsource-v0.2.4) (2026-11-06)
 
 

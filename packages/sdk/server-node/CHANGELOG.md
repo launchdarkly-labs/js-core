@@ -2,6 +2,44 @@
 
 All notable changes to `@launchdarkly/node-server-sdk` will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [9.17.0](https://github.com/launchdarkly-labs/js-core/compare/node-server-sdk-v9.16.4...node-server-sdk-v9.17.0) (2026-11-10)
+
+
+### Features
+
+* add a custom proxyAgent option to the Node server SDK ([#1438](https://github.com/launchdarkly-labs/js-core/issues/1438)) ([c74dae7](https://github.com/launchdarkly-labs/js-core/commit/c74dae74e01fa2f36ec91086f53658d4644d9c9f))
+* Add experimental support for file-based overrides. ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Add optional file stats, watch error reporting, and the changed entry name to the platform filesystem interface ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* add X-LaunchDarkly-Instance-Id header to server-node SDK (SDK-2358) ([#1377](https://github.com/launchdarkly-labs/js-core/issues/1377)) ([814dc0b](https://github.com/launchdarkly-labs/js-core/commit/814dc0bfd6b152385f3a758f9eeca37a0f9f08e8))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2059](https://github.com/launchdarkly-labs/js-core/issues/2059)) ([a80e7ee](https://github.com/launchdarkly-labs/js-core/commit/a80e7ee89736f69eb0d3b7080c03759dbb8de6a5))
+* Migrate the Node.js server and client SDKs to @launchdarkly/eventsource through the platform fetch ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* **sdk-server-common:** add support for custom base uris in FDv2 datasources  ([#1827](https://github.com/launchdarkly-labs/js-core/issues/1827)) ([5d028c3](https://github.com/launchdarkly-labs/js-core/commit/5d028c36ab308973957dff226839026994b70fd2))
+* Verify TLS certificates on streaming connections by default; a stream served by a private CA now requires tlsParams ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+
+
+### Bug Fixes
+
+* add SOCKS proxy example and fixes warning logging and proxyAuth reporting ([#1786](https://github.com/launchdarkly-labs/js-core/issues/1786)) ([a5b42ca](https://github.com/launchdarkly-labs/js-core/commit/a5b42ca3bf7d0672bf303cf47036ea801f6b9093))
+* Allow polling and event delivery to connect through a proxy when a private CA is configured ([10b57b0](https://github.com/launchdarkly-labs/js-core/commit/10b57b01ce348b216fd98e515740bc5d50830017))
+* Coalesce bursts of file change notifications into one file data reload ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Detect rename-based writes and recreated files in the file data source by watching the containing directories ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* Re-establish the file data watch when a watched directory is deleted and created again ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Report file data read and processing failures through the error handler instead of an unhandled promise rejection ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Retry a failed file data reload and keep the last good data in effect ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* **sdk-client:** `executeAfterTrack` ordering ([58e063b](https://github.com/launchdarkly-labs/js-core/commit/58e063bad4651e25beea644425bea23a20f4870f))
+* **sdk-server-common:** use subpath import for `semver` module ([#1885](https://github.com/launchdarkly-labs/js-core/issues/1885)) ([2de6c8c](https://github.com/launchdarkly-labs/js-core/commit/2de6c8cc39e6b7a4e4092af0731b2de124d56b94))
+* **server-node:** honor x-ld-fd-fallback directive in FDv2 initializer phase ([#1342](https://github.com/launchdarkly-labs/js-core/issues/1342)) ([a80eaca](https://github.com/launchdarkly-labs/js-core/commit/a80eacaafa6174e5f1b4fe21ba11534fdf1f92a8))
+* Wire timeout option through to flag polling and event delivery requests ([#1760](https://github.com/launchdarkly-labs/js-core/issues/1760)) ([e18998e](https://github.com/launchdarkly-labs/js-core/commit/e18998eb339a7edc1e059c2f6832afe2739b0bd6))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/eventsource bumped from 0.2.4 to 0.3.0
+    * @launchdarkly/js-server-sdk-common bumped from 2.26.4 to 2.27.0
+
 ## [9.16.4](https://github.com/launchdarkly/js-core/compare/node-server-sdk-v9.16.3...node-server-sdk-v9.16.4) (2026-11-06)
 
 

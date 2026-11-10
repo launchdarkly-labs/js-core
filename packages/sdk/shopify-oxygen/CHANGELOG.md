@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.3.0](https://github.com/launchdarkly-labs/js-core/compare/shopify-oxygen-sdk-v0.2.6...shopify-oxygen-sdk-v0.3.0) (2026-11-10)
+
+
+### Features
+
+* Add optional streaming members to the platform fetch types ([#2092](https://github.com/launchdarkly-labs/js-core/issues/2092)) ([4137805](https://github.com/launchdarkly-labs/js-core/commit/4137805723e14f1f21c07b45039c4eeda9889519))
+
+
+### Bug Fixes
+
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* explicit return types and TS6 source compatibility fixes ([#1418](https://github.com/launchdarkly-labs/js-core/issues/1418)) ([9c131a2](https://github.com/launchdarkly-labs/js-core/commit/9c131a2e731c97a7fd4cf7ec1fe11efbbf49d6fb))
+* **oxygen-sdk:** document event sending and align event sending logic with other edge sdks ([#1844](https://github.com/launchdarkly-labs/js-core/issues/1844)) ([86ed0ad](https://github.com/launchdarkly-labs/js-core/commit/86ed0adff8209d49725d6d10acb9f6b03c02239c))
+* server sdk could send user agent headers under a different header name ([#1860](https://github.com/launchdarkly-labs/js-core/issues/1860)) ([669662a](https://github.com/launchdarkly-labs/js-core/commit/669662a304c10bcb2b683e0c7ea990f43679916b))
+* **shopify:** standardizing the pre-release banner ([#1268](https://github.com/launchdarkly-labs/js-core/issues/1268)) ([82adddb](https://github.com/launchdarkly-labs/js-core/commit/82adddb56bcd752954a0107ff3983cf57d1bdb26))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-server-sdk-common bumped from 2.26.4 to 2.27.0
+
 ## [0.2.6](https://github.com/launchdarkly/js-core/compare/shopify-oxygen-sdk-v0.2.5...shopify-oxygen-sdk-v0.2.6) (2026-11-06)
 
 

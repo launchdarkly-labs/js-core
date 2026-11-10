@@ -1,5 +1,43 @@
 # Changelog
 
+## [3.0.0](https://github.com/launchdarkly-labs/js-core/compare/openfeature-js-server-common-v2.2.3...openfeature-js-server-common-v3.0.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Map LaunchDarkly evaluation reasons to OpenFeature reasons ([#1887](https://github.com/launchdarkly-labs/js-core/issues/1887))
+* Map the WRONG_TYPE error kind to TYPE_MISMATCH ([#1888](https://github.com/launchdarkly-labs/js-core/issues/1888))
+* release `@launchdarkly/openfeature-js-server-common` ([#1754](https://github.com/launchdarkly-labs/js-core/issues/1754))
+
+### Features
+
+* Add experimental support for file-based overrides. ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Add optional file stats, watch error reporting, and the changed entry name to the platform filesystem interface ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Populate OpenFeature flag metadata from the evaluation reason ([#1869](https://github.com/launchdarkly-labs/js-core/issues/1869)) ([d5bdaeb](https://github.com/launchdarkly-labs/js-core/commit/d5bdaebb515a5357cbdc6da52b5b911bc4af7351))
+* release `@launchdarkly/openfeature-js-server-common` ([#1754](https://github.com/launchdarkly-labs/js-core/issues/1754)) ([f83f6db](https://github.com/launchdarkly-labs/js-core/commit/f83f6db16b6c77f1cbc5cfeb4dfd47b7c17b71bf))
+* Support zero and indefinite initialization waiting ([#2024](https://github.com/launchdarkly-labs/js-core/issues/2024)) ([8bfd257](https://github.com/launchdarkly-labs/js-core/commit/8bfd257bd561109faa5be0c1a6b6a7620bb2c66f))
+
+
+### Bug Fixes
+
+* Align OpenFeature context conversion log levels with the provider spec ([#2183](https://github.com/launchdarkly-labs/js-core/issues/2183)) ([c356b22](https://github.com/launchdarkly-labs/js-core/commit/c356b22c8a7226446afc13609b0ec4bfb1d86c0e))
+* Coalesce bursts of file change notifications into one file data reload ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Detect rename-based writes and recreated files in the file data source by watching the containing directories ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Ignore non-string and empty keys in OpenFeature context conversion ([#1989](https://github.com/launchdarkly-labs/js-core/issues/1989)) ([6bf9c62](https://github.com/launchdarkly-labs/js-core/commit/6bf9c623ae74d7e0b58b7610bce1675df44a34fc))
+* Map LaunchDarkly evaluation reasons to OpenFeature reasons ([#1887](https://github.com/launchdarkly-labs/js-core/issues/1887)) ([70291f4](https://github.com/launchdarkly-labs/js-core/commit/70291f4862384f18ef4e9bf11045c7f4df73a116))
+* Map the WRONG_TYPE error kind to TYPE_MISMATCH ([#1888](https://github.com/launchdarkly-labs/js-core/issues/1888)) ([2d60942](https://github.com/launchdarkly-labs/js-core/commit/2d60942d15812fea1cf82be72101492422da813d))
+* Re-establish the file data watch when a watched directory is deleted and created again ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Report file data read and processing failures through the error handler instead of an unhandled promise rejection ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Retry a failed file data reload and keep the last good data in effect ([9c0effe](https://github.com/launchdarkly-labs/js-core/commit/9c0effe9d614ce41cf72a3254e25822c32d9d2f2))
+* Validate privateAttributes in OpenFeature context conversion ([#1990](https://github.com/launchdarkly-labs/js-core/issues/1990)) ([a65af44](https://github.com/launchdarkly-labs/js-core/commit/a65af447a734a0c8366f845b81b33a7ee47b4845))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-sdk-common bumped from 2.32.2 to 2.33.0
+
 ## [2.2.3](https://github.com/launchdarkly/js-core/compare/openfeature-js-server-common-v2.2.2...openfeature-js-server-common-v2.2.3) (2026-11-06)
 
 

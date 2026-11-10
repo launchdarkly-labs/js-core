@@ -1,5 +1,36 @@
 # Changelog
 
+## [2.0.0](https://github.com/launchdarkly-labs/js-core/compare/client-testing-plugin-v1.0.31...client-testing-plugin-v2.0.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* release `@launchdarkly/client-testing-plugin` ([#1755](https://github.com/launchdarkly-labs/js-core/issues/1755))
+* prerelease `@launchdarkly/client-testing-plugin` ([#1422](https://github.com/launchdarkly-labs/js-core/issues/1422))
+
+### Features
+
+* prerelease `@launchdarkly/client-testing-plugin` ([#1422](https://github.com/launchdarkly-labs/js-core/issues/1422)) ([d801e9e](https://github.com/launchdarkly-labs/js-core/commit/d801e9e923f8c81e177e25c846cf7e76398cc36e))
+* release `@launchdarkly/client-testing-plugin` ([#1755](https://github.com/launchdarkly-labs/js-core/issues/1755)) ([9d44e25](https://github.com/launchdarkly-labs/js-core/commit/9d44e25380d58b1510b510d5f2a5b6d4d05e58e9))
+
+
+### Bug Fixes
+
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-client-sdk-common bumped from 1.35.2 to 1.36.0
+  * devDependencies
+    * @launchdarkly/js-client-sdk bumped from 4.14.2 to 4.15.0
+    * @launchdarkly/react-sdk bumped from 4.2.2 to 4.3.0
+  * peerDependencies
+    * @launchdarkly/js-client-sdk bumped from ^4.9.1 to ^4.15.0
+    * @launchdarkly/react-sdk bumped from ^4.1.4 to ^4.3.0
+
 ## [1.0.31](https://github.com/launchdarkly/js-core/compare/client-testing-plugin-v1.0.30...client-testing-plugin-v1.0.31) (2026-11-06)
 
 

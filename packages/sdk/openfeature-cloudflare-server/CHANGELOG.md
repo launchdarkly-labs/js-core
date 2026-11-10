@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.0.0](https://github.com/launchdarkly-labs/js-core/compare/openfeature-cloudflare-server-v1.2.0...openfeature-cloudflare-server-v2.0.0) (2026-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Promote @launchdarkly/openfeature-cloudflare-server to stable v1 ([#1873](https://github.com/launchdarkly-labs/js-core/issues/1873))
+
+### Features
+
+* Add an initialization timeout option to the OpenFeature Cloudflare provider ([#2182](https://github.com/launchdarkly-labs/js-core/issues/2182)) ([ba6ee3a](https://github.com/launchdarkly-labs/js-core/commit/ba6ee3a069adc950db6e59744f2599537445f8d3))
+* Promote @launchdarkly/openfeature-cloudflare-server to stable v1 ([#1873](https://github.com/launchdarkly-labs/js-core/issues/1873)) ([4f9b349](https://github.com/launchdarkly-labs/js-core/commit/4f9b3496e81d5d2d552a4e36c870f913137703fd))
+
+
+### Bug Fixes
+
+* Resolve types under node16/nodenext module resolution ([#2115](https://github.com/launchdarkly-labs/js-core/issues/2115)) ([ca1613c](https://github.com/launchdarkly-labs/js-core/commit/ca1613c20130b9308bafb8c98e0843d8d92fee01))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/openfeature-js-server-common bumped from 2.2.3 to 3.0.0
+  * devDependencies
+    * @launchdarkly/cloudflare-server-sdk bumped from 2.7.51 to 2.7.52
+  * peerDependencies
+    * @launchdarkly/cloudflare-server-sdk bumped from ^2.7.0 to ^2.7.52
+
 ## [1.2.0](https://github.com/launchdarkly/js-core/compare/openfeature-cloudflare-server-v1.1.3...openfeature-cloudflare-server-v1.2.0) (2026-11-06)
 
 

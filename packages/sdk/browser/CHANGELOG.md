@@ -1,5 +1,45 @@
 # Changelog
 
+## [4.15.0](https://github.com/launchdarkly-labs/js-core/compare/js-client-sdk-v4.14.2...js-client-sdk-v4.15.0) (2026-11-10)
+
+
+### Features
+
+* Add a shared WebSocket base to the contract test utils and use it in the browser contract tests ([#2136](https://github.com/launchdarkly-labs/js-core/issues/2136)) ([af2f096](https://github.com/launchdarkly-labs/js-core/commit/af2f096c72a198ceb5beda50437068aa6d354006))
+* Add an opt-in fetch-based EventSource entry to the browser SDK ([#2033](https://github.com/launchdarkly-labs/js-core/issues/2033)) ([7a21f6f](https://github.com/launchdarkly-labs/js-core/commit/7a21f6f717acd88a45d2a97e634126cb7d263630))
+* Add eventSource factory and usePost options to the client-side SDK common ([#2032](https://github.com/launchdarkly-labs/js-core/issues/2032)) ([f514d5b](https://github.com/launchdarkly-labs/js-core/commit/f514d5bc1fd7c995ed63e7eae3ff4624889ea941))
+* add retry logic to FDv2 polling initializer ([#1230](https://github.com/launchdarkly-labs/js-core/issues/1230)) ([fe8bd37](https://github.com/launchdarkly-labs/js-core/commit/fe8bd375af48edfcfe83822bbbbe4546551c90d9))
+* adding start() method to common client sdk package ([#1244](https://github.com/launchdarkly-labs/js-core/issues/1244)) ([7f5f468](https://github.com/launchdarkly-labs/js-core/commit/7f5f468f93eaa4655d1432af5e7bf8819104700a))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2059](https://github.com/launchdarkly-labs/js-core/issues/2059)) ([a80e7ee](https://github.com/launchdarkly-labs/js-core/commit/a80e7ee89736f69eb0d3b7080c03759dbb8de6a5))
+* conform FDv1 streaming and polling data sources to the RETRY spec ([#2098](https://github.com/launchdarkly-labs/js-core/issues/2098)) ([0d5e30d](https://github.com/launchdarkly-labs/js-core/commit/0d5e30d1d9c904c1b34020075d397b06523a5c3a))
+* expose setConnectionMode on browser SDK ([#1232](https://github.com/launchdarkly-labs/js-core/issues/1232)) ([9019808](https://github.com/launchdarkly-labs/js-core/commit/9019808edd5f78cbddd9b031da1589cbaa49938f))
+* **js-client-sdk:** add ability to customize storage impl ([#1404](https://github.com/launchdarkly-labs/js-core/issues/1404)) ([77864cb](https://github.com/launchdarkly-labs/js-core/commit/77864cb04f737c8aab4476422a2a2422c7be978c))
+* Prepare FDv2 EAP for browser and React Native SDKs ([#1419](https://github.com/launchdarkly-labs/js-core/issues/1419)) ([6ee9c51](https://github.com/launchdarkly-labs/js-core/commit/6ee9c515fe9aaf999fd7f0eb722d6df9a2d208d8))
+* wire fdv1-fallback capability into node-client, browser, and react-native contract-test entities ([#1858](https://github.com/launchdarkly-labs/js-core/issues/1858)) ([462c950](https://github.com/launchdarkly-labs/js-core/commit/462c95098d2143802939cd010cfacd39e26a1c22))
+* wire registerDebugOverrides through client common ([#1368](https://github.com/launchdarkly-labs/js-core/issues/1368)) ([9011c2a](https://github.com/launchdarkly-labs/js-core/commit/9011c2a76f7460770efe3c07b3e16338b647d9df))
+
+
+### Bug Fixes
+
+* add defensive cycle guard to prerequisite evaluation ([#1816](https://github.com/launchdarkly-labs/js-core/issues/1816)) ([9426b42](https://github.com/launchdarkly-labs/js-core/commit/9426b42dbb5e96914c62462ff7281ec6e24727b3))
+* correct typeof comparisons in browser SDK ([#1301](https://github.com/launchdarkly-labs/js-core/issues/1301)) ([f4bd636](https://github.com/launchdarkly-labs/js-core/commit/f4bd6369e03353f38abfdf1b4b8ef90aa7c79ffb))
+* enabling eslint `ban-types` rule and fixed string typing ([#1313](https://github.com/launchdarkly-labs/js-core/issues/1313)) ([f6d907f](https://github.com/launchdarkly-labs/js-core/commit/f6d907f1a65abd0b41827f3c827e6dad896b16b1))
+* Ensure FDv2 waits for network results instead of cached results. ([#1397](https://github.com/launchdarkly-labs/js-core/issues/1397)) ([142da36](https://github.com/launchdarkly-labs/js-core/commit/142da363702264debef25796f92760b8ec6ab342))
+* FDv2 - Support dynamic reconnect URL for streaming. Handle 'error' event types for SSE. ([#1252](https://github.com/launchdarkly-labs/js-core/issues/1252)) ([4ef6cdd](https://github.com/launchdarkly-labs/js-core/commit/4ef6cdd3f07a15e9a6b3b831defcf41d10e6334b))
+* **js-client-sdk:** better `undefined` handling ([#1303](https://github.com/launchdarkly-labs/js-core/issues/1303)) ([4818678](https://github.com/launchdarkly-labs/js-core/commit/4818678282bc6aa54aca00c2d1cb02d2a6b14bf8))
+* **js-client-sdk:** better handling for event batches over 64 kb ([3a6c08a](https://github.com/launchdarkly-labs/js-core/commit/3a6c08aa83b99f27dbbf08c6af458c675f1e1723))
+* Keep JSDoc in sdk-client declarations and show inherited LDClient docs ([#2181](https://github.com/launchdarkly-labs/js-core/issues/2181)) ([09b5f99](https://github.com/launchdarkly-labs/js-core/commit/09b5f99ba0f605f1d809411cd2a8762189e947a7))
+* **sdk-client:** `executeAfterTrack` ordering ([58e063b](https://github.com/launchdarkly-labs/js-core/commit/58e063bad4651e25beea644425bea23a20f4870f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @launchdarkly/js-client-sdk-common bumped from 1.35.2 to 1.36.0
+  * optionalDependencies
+    * @launchdarkly/eventsource bumped from 0.2.4 to 0.3.0
+
 ## [4.14.2](https://github.com/launchdarkly/js-core/compare/js-client-sdk-v4.14.1...js-client-sdk-v4.14.2) (2026-11-06)
 
 

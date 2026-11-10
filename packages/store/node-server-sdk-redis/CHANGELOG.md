@@ -1,5 +1,32 @@
 # Changelog
 
+## [4.5.0](https://github.com/launchdarkly-labs/js-core/compare/node-server-sdk-redis-v4.4.7...node-server-sdk-redis-v4.5.0) (2026-11-10)
+
+
+### Features
+
+* Report Redis store errors and implement the availability check ([a9d8d8b](https://github.com/launchdarkly-labs/js-core/commit/a9d8d8be11f95c3e9f107cd8c66dcec3529b8f06))
+* Update store peer dep floor to 9.14.1 to better support error reporting and recovery ([#2097](https://github.com/launchdarkly-labs/js-core/issues/2097)) ([1369fa4](https://github.com/launchdarkly-labs/js-core/commit/1369fa4a157fdc3bc175f96ce77d81877a453c22))
+
+
+### Bug Fixes
+
+* Avoid querying a persistent store on every evaluation of an unknown flag ([#2169](https://github.com/launchdarkly-labs/js-core/issues/2169)) ([da1cd35](https://github.com/launchdarkly-labs/js-core/commit/da1cd35d196cafa2b29925aa65306ccc2201e865))
+* **persistent-store:** add error logs for upsert ([#1985](https://github.com/launchdarkly-labs/js-core/issues/1985)) ([5ff1cf2](https://github.com/launchdarkly-labs/js-core/commit/5ff1cf240f6c197c38cc1caceabadf12b3c89ea5))
+* Prevent a Redis outage from crashing the process through an unhandled watch rejection ([a9d8d8b](https://github.com/launchdarkly-labs/js-core/commit/a9d8d8be11f95c3e9f107cd8c66dcec3529b8f06))
+* Prevent an interrupted write-back from being reported as successful ([a9d8d8b](https://github.com/launchdarkly-labs/js-core/commit/a9d8d8be11f95c3e9f107cd8c66dcec3529b8f06))
+* Report write failures promptly during an extended Redis outage ([a9d8d8b](https://github.com/launchdarkly-labs/js-core/commit/a9d8d8be11f95c3e9f107cd8c66dcec3529b8f06))
+* settle Redis getAll when HGETALL fails ([#2078](https://github.com/launchdarkly-labs/js-core/issues/2078)) ([bcfce79](https://github.com/launchdarkly-labs/js-core/commit/bcfce7938ee4504c0c49c83ec98384288eef53ee))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @launchdarkly/node-server-sdk bumped from 9.16.4 to 9.17.0
+  * peerDependencies
+    * @launchdarkly/node-server-sdk bumped from >=9.14.1 to >=9.17.0
+
 ## [4.4.7](https://github.com/launchdarkly/js-core/compare/node-server-sdk-redis-v4.4.6...node-server-sdk-redis-v4.4.7) (2026-11-06)
 
 
